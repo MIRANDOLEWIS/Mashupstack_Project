@@ -12,7 +12,7 @@ function validateForm(e){
         //input from the user
     var name = document.getElementById('name').value.trim();
     var e_mail = document.getElementById('email').value.toLowerCase().trim();
-    var password = document.getElementById("password").value.trim();
+    var password= document.getElementById("password").value.trim();
     var confirmpass = document.getElementById('confirm-password').value.trim()
     var phone = document.getElementById('phone').value.trim()
 
@@ -35,9 +35,9 @@ function validateForm(e){
 
 	    }
 
-	    if(confirmpass !== regPassword){
+	    if( password !== confirmpass ){
 	    	document.getElementById('confirmPassErr').innerHTML = 'Please re-enter your Password';
-	    	document.getElementById('password').focus();
+	    	document.getElementById('confirm-password').focus();
 	    }	
 
 	    if(!regPhone.test(phone)){
